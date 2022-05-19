@@ -1,0 +1,28 @@
+PROJECT: Installing openWrt on a raspberrypi.
+
+1** Installing an Operating System on the Raspberry
+      From the Raspbian website https://www.raspberrypi.com/software/ I download the Raspbian software and copy it to the Raspberry SD card
+      I create an empty file in the SD card using the command # touch /volumes/boot ssh on the prompt. Then I assign an IP address to Raspberry using a configuration file called wpa_supplicant.conf that I create and edited using nano to put the raspberry in my home network. The command is nano wpa_supplicant.cont. The content of file is: 
+      country=US
+      ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+      update_config=1
+      network={
+      scan_ssid=1
+      ssid=“MY-NETWORK-NAME"
+      psk=“MY WiFi password"
+      }
+
+      After creating those two files, I eject the SD card and on my computer to insert it on the Raspberry. I ssh to the raspberry using the its IP address given by my home router. The command is #ssh pi@192.168.1.112 the I put the password which is raspberry, I answer yes to prompt and I gain access to the Raspberry.
+      Once I was in the Raspberry CLI I type the folowing command: raspi-config then type enter. Use the arrow keys to select Interfacing Options and press Enter.
+      Use the arrow keys to select VNC and press Enter.
+      You will be prompted to enable VNC Server.
+
+2**. Installing the openWrt on the Raspbian:**
+      I flash the openWrt image to a micro SD card using the open source one from the Raspberry Pi team "link https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility/".
+      Once complete insert the SD card into the Raspberry Pi and I booted it up. from a web browser, I type it's IP address then I got access to the openWrt interface.
+      From the the openWrt interface a lot of configuration can be done:
+          1. Configuring an access point
+          2. Creation VLAN
+          3. Using the raspberrypi as the LAN router
+          4.Using the raspberrypi as DNS or a DHCP server
+          5. Configuring a firewall and difining rules for ingress and outgress trafic as well as bolcking and opening ports.
