@@ -17,13 +17,15 @@ PROJECT: Installing openWrt on a raspberrypi.
       Another method of configuring the raspberrypi to be part of my network is to use the configuration button on the battom right of the imager and checking the 
       the appropriete option to anable ssh, SSID and writing the WI-FI name and password and you hit the save botton.
 
-      After creating those two files, I eject the SD card and on my computer to insert it on the Raspberry. I ssh to the raspberry using the its IP address given by my home router. The command is #ssh pi@192.168.1.112 the I put the password which is raspberry, I answer yes to prompt and I gain access to the Raspberry.
+      After creating those two files, I eject the SD card and on my computer to insert it on the Raspberry. I ssh to the raspberry using the its IP address given by 
+      my home router. The command is #ssh pi@192.168.1.112 the I put the password which is raspberry, I answer yes to prompt and I gain access to the Raspberry.
       Once I was in the Raspberry CLI I type the folowing command: raspi-config then type enter. Use the arrow keys to select Interfacing Options and press Enter.
       Use the arrow keys to select VNC and press Enter.
       You will be prompted to enable VNC Server.
 
 2**. Installing the openWrt on the Raspbian:**
-      I flash the openWrt image to a micro SD card using the open source one from the Raspberry Pi team "link https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility/".
+      I flash the openWrt image to a micro SD card using the open source one from the Raspberry Pi team 
+      "link https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility/".
       Once complete insert the SD card into the Raspberry Pi and I booted it up. from a web browser, I type it's IP address then I got access to the openWrt interface.
       From the the openWrt interface a lot of configuration can be done:
           1. Configuring an access point
