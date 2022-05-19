@@ -19,7 +19,7 @@ PROJECT: Installing openWrt on a raspberrypi.
 
       After creating those two files, I eject the SD card and on my computer to insert it on the Raspberry. I ssh to the raspberry using the its IP address given by 
       my home router. The command is #ssh pi@192.168.1.112 the I put the password which is raspberry, I answer yes to the prompt gain to gainaccess to the Raspberry but
-      it didn't work. To access to my raspsberrypi I utilize a HDMI cable to connect it to the my televison and and enable VNC then I used its IP address to connect to 
+      it didn't work. To access to my raspsberrypi I utilize an HDMI cable to connect it to the my televison and and enable VNC then I used its IP address to connect to 
       it using virtual network connection (VNC).
       Once I was in the Raspberry CLI I type the folowing command: raspi-config then type enter to display the configuration options. Use the arrow keys to select
       Interfacing Options and press Enter.
